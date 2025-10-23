@@ -3,44 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design Portfolio</title>
-    <style>
-      body {
-        font-family: "Noto Sans JP", sans-serif;
-        background: #f8f8f8;
-        text-align: center;
-        padding: 40px;
-      }
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 1em;
-      }
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        max-width: 900px;
-        margin: 0 auto;
-      }
-      .gallery img {
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-      }
-      .gallery img:hover {
-        transform: scale(1.05);
-      }
-    </style>
+    <title>デザインポートフォリオ</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <h1>Design Portfolio</h1>
-    <p>これまで制作したデザインバナーの一部です。</p>
+    <p>これまで制作したデザインバナーや練習中の作品の一部です。</p>
 
-    <div class="gallery">
-      <img src="images/banner01.jpg" alt="バナー1" />
+    <!-- バナー作品 -->
+    <h2>バナー作品</h2>
+    <p>練習用に制作した架空のバナーです。</p>
+
+    <div class="gallery-item">
+      <div class="work-image">
+        <img
+          src="images/banner_opencanpas.png"
+          alt="専門学校オープンキャンパスバナー"
+        />
+      </div>
+      <div class="caption">
+        <h3>専門学校オープンキャンパス告知バナー</h3>
+        <p>
+          <strong>制作意図:</strong>
+          秋に開催されるオープンキャンパスへの誘導と、親しみやすい学校の雰囲気作り。<br />
+          <strong>コンセプト:</strong>
+          「アートの秋」をテーマに、暖色系（オレンジ、ブラウンなど）で全体をまとめ、落ち着きと創作意欲が湧くようなトーンを意識しました。<br />
+          <strong>デザインポイント:</strong>
+          アート系の学校であることを示すため、服装やポーズに個性を持つ女性をメインビジュアルに採用しました。
+        </p>
+      </div>
+    </div>
+
+    <!-- <div class="gallery-item">
       <img src="images/banner02.jpg" alt="バナー2" />
+      <div class="caption">
+        <h3>バナー2</h3>
+        <p>イベント告知用バナー。目立つ色使いとキャッチコピーを強調。</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
       <img src="images/banner03.jpg" alt="バナー3" />
+      <div class="caption">
+        <h3>バナー3</h3>
+        <p>プロモーション用バナー。シンプルで見やすいレイアウトに。</p>
+      </div>
+    </div> -->
+
+    <!-- Figma作品 -->
+    <h2>Figma 練習作品</h2>
+    <p>Figmaで作った練習中のデザインです。</p>
+
+    <div class="gallery-item">
+      <img src="images/figma/figma_renshu.png" alt="Figma作品1" />
+      <div class="caption">
+        <h3>UI模写練習1（途中）</h3>
+        <p>
+          <strong>制作意図:</strong>
+          WebサイトのUI模写を通して、Figma操作の習熟とレイアウト理解を深める。<br />
+          <strong>こだわり:</strong>
+          8pxグリッドを意識し、余白やボタンサイズを正確に再現。<br />
+          <strong>学び:</strong>
+          デザインの整列感や視線の誘導を意識して情報を整理する練習。
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/figma/figma_renshu2.png" alt="Figma作品2" />
+      <div class="caption">
+        <h3>作品タイトル2</h3>
+        <p>練習中のUIデザイン。アイコン配置を工夫しました。</p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/figma/figma_work03.png" alt="Figma作品3" />
+      <div class="caption">
+        <h3>作品タイトル3</h3>
+        <p>レイアウト練習。色彩とバランスを意識しました。</p>
+      </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,44 @@
+/* 全体 */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background: #f8f8f8;
+  padding: 40px;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin-bottom: 1em;
+}
+
+p {
+  margin-bottom: 2em;
+}
+
+/* 作品カード（バナーもFigmaも同じ） */
+.gallery-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.caption {
+  text-align: left;
+  flex: 1;
+}

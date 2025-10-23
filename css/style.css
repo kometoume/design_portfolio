@@ -26,12 +26,14 @@ p {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* 横幅が狭くなったら折り返す */
 }
 
 .gallery-item img {
   width: 300px;
   border-radius: 10px;
   transition: transform 0.3s ease;
+  flex-shrink: 0; /* 画像が小さくなりすぎないように */
 }
 
 .gallery-item img:hover {
@@ -41,4 +43,23 @@ p {
 .caption {
   text-align: left;
   flex: 1;
+  min-width: 200px; /* 狭くなりすぎるのを防ぐ */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .gallery-item {
+    flex-direction: column; /* 縦並びに変更 */
+    text-align: center;
+  }
+
+  .caption {
+    text-align: center;
+  }
+
+  .gallery-item img {
+    width: 80%; /* 横幅を画面に合わせる */
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }

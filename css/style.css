@@ -27,13 +27,20 @@ p {
   display: flex;
   align-items: stretch;
   gap: 20px;
-  max-width: 900px;
+  /* max-width: 900px; */
   margin: 20px auto;
   padding: 20px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
+}
+.gallery-item.multi-image {
+  flex-wrap: nowrap;
+}
+
+.gallery-item.multi-image .work-image {
+  flex: 0 0 clamp(200px, 28vw, 300px);
 }
 
 /* ---------------------

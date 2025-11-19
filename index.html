@@ -9,6 +9,7 @@
   <body>
     <h1>Design Portfolio</h1>
     <p>これまで制作したデザインバナーや練習中の作品の一部です。</p>
+
     <!-- Illustrator作品（カフェメニュー） -->
     <h2>Illustrator作品（カフェメニュー）</h2>
     <p>カフェのメニュー表デザインです。</p>
@@ -55,6 +56,7 @@
         Illustrator／パスのオフセット機能やタブ、リーダー機能を用いて、DTPらしい精度の高いレイアウトを意識して制作しました。
       </div>
     </div>
+
     <!-- バナー作品 -->
     <h2>バナー作品</h2>
     <p>練習用に制作した架空のバナーです。</p>
@@ -130,5 +132,49 @@
         <p>Figmaでのアイコン模写練習。パス編集・整列の精度を意識しました。</p>
       </div>
     </div>
+
+    <!-- 画像モーダル -->
+    <div class="modal" id="imageModal" aria-hidden="true">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <button class="modal__close" aria-label="閉じる">&times;</button>
+        <img src="" alt="" id="modalImage" />
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const closeBtn = document.querySelector(".modal__close");
+        const overlay = document.querySelector(".modal__overlay");
+
+        // すべての作品画像にクリックイベントを付与
+        document.querySelectorAll(".work-image img").forEach((img) => {
+          img.style.cursor = "pointer";
+          img.addEventListener("click", () => {
+            modal.classList.add("is-active");
+            modalImg.src = img.src;
+            modalImg.alt = img.alt || "";
+            modal.setAttribute("aria-hidden", "false");
+          });
+        });
+
+        const closeModal = () => {
+          modal.classList.remove("is-active");
+          modal.setAttribute("aria-hidden", "true");
+          modalImg.src = "";
+        };
+
+        closeBtn.addEventListener("click", closeModal);
+        overlay.addEventListener("click", closeModal);
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            closeModal();
+          }
+        });
+      });
+    </script>
   </body>
 </html>

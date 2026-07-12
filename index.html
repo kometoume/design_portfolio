@@ -7,572 +7,604 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Design Portfolio</h1>
-    <p>これまで制作したデザインバナーや練習中の作品の一部です。</p>
+    <header class="site-header">
+      <p class="site-header__eyebrow">Design Portfolio</p>
+      <h1>Design Works</h1>
+      <p class="site-header__lead">
+        これまで制作したデザインバナーや練習中の作品の一部です。カードをクリックすると制作意図や工程の詳細が見られます。
+      </p>
+    </header>
 
-    <!-- Web広告・セミナー告知バナー（実務） -->
-    <h2>Web広告・セミナー告知バナー（実務制作）</h2>
-    <p>
-      薬局・医療関係者向けサービスのWeb広告やセミナー告知として、実際に配信・掲載された広告バナーです。
-    </p>
+    <nav class="filter-nav" aria-label="作品カテゴリ">
+      <button type="button" class="filter-btn is-active" data-filter="all">
+        すべて
+      </button>
+      <button type="button" class="filter-btn" data-filter="web-ad">
+        Web広告・バナー
+      </button>
+      <button type="button" class="filter-btn" data-filter="illustrator">
+        Illustrator
+      </button>
+      <button type="button" class="filter-btn" data-filter="photoshop">
+        Photoshop
+      </button>
+      <button type="button" class="filter-btn" data-filter="figma">
+        Figma
+      </button>
+    </nav>
 
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/web-ad/webad_typography.png"
-          alt="Web広告バナー（タイポグラフィ訴求）"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <div class="caption">
-        <h3>Web広告バナー（タイポグラフィ×警告色訴求）</h3>
-        <p>
-          <strong>制作意図:</strong>
-          薬局経営者・法人代表者に向けて、期限が迫るテーマへの危機感と行動喚起を短時間で伝えるための正方形バナーです。<br />
-          <strong>デザインポイント:</strong>
-        </p>
-        <ul class="caption-list">
-          <li>
-            濃紺の背景にグラデーション文字とグラフ・矢印のモチーフを重ね、「利益を左右する」という訴求を視覚的に補強
-          </li>
-          <li>
-            赤い帯で条件（対象者限定）を強調し、黄色のCTAボタンで視線の最終着地点を明確化
-          </li>
-          <li>文字のジャンプ率を大きく取り、SNS上でもひと目で要点が伝わるよう設計</li>
-        </ul>
-      </div>
-    </div>
+    <main class="work-grid" id="workGrid">
+      <!-- ============ Web広告・バナー ============ -->
+      <article class="work-card" data-category="web-ad">
+        <button type="button" class="work-card__trigger">
+          <span class="work-card__image">
+            <img
+              src="images/web-ad/webad_typography.png"
+              alt="Web広告バナー（タイポグラフィ訴求）"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="work-card__meta">
+            <span class="work-card__tag">Web広告・バナー</span>
+            <span class="work-card__title"
+              >Web広告バナー（タイポグラフィ×警告色訴求）</span
+            >
+          </span>
+        </button>
+        <template>
+          <h3>Web広告バナー（タイポグラフィ×警告色訴求）</h3>
+          <div class="modal__images">
+            <img
+              src="images/web-ad/webad_typography.png"
+              alt="Web広告バナー（タイポグラフィ訴求）"
+            />
+          </div>
+          <div class="modal__text">
+            <p>
+              <strong>制作意図:</strong>
+              薬局経営者・法人代表者に向けて、期限が迫るテーマへの危機感と行動喚起を短時間で伝えるための正方形バナーです。
+            </p>
+            <p><strong>デザインポイント:</strong></p>
+            <ul>
+              <li>
+                濃紺の背景にグラデーション文字とグラフ・矢印のモチーフを重ね、「利益を左右する」という訴求を視覚的に補強
+              </li>
+              <li>
+                赤い帯で条件（対象者限定）を強調し、黄色のCTAボタンで視線の最終着地点を明確化
+              </li>
+              <li>
+                文字のジャンプ率を大きく取り、SNS上でもひと目で要点が伝わるよう設計
+              </li>
+            </ul>
+          </div>
+        </template>
+      </article>
 
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/web-ad/webad_seminar_16x9.png"
-          alt="セミナー告知バナー（フォトコンポジション）"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <div class="caption">
-        <h3>セミナー告知バナー（16:9・フォトコンポジション）</h3>
-        <p>
-          <strong>制作意図:</strong>
-          オンラインセミナーの告知用バナーとして、白衣姿の人物写真と情報を左右に整理し、信頼感と開催情報の見やすさを両立させました。<br />
-          <strong>デザインポイント:</strong>
-        </p>
-        <ul class="caption-list">
-          <li>左側にテキスト情報、右側に人物写真を配置し、視線誘導を意識したレイアウト</li>
-          <li>
-            帯（リボン）とベタ塗りブロックでタイトル・サブタイトル・日時の情報階層を明確化
-          </li>
-          <li>青系の配色で医療・健康分野らしい清潔感と信頼感を演出</li>
-        </ul>
-      </div>
-    </div>
+      <article class="work-card" data-category="web-ad">
+        <button type="button" class="work-card__trigger">
+          <span class="work-card__image">
+            <img
+              src="images/web-ad/webad_seminar_16x9.png"
+              alt="セミナー告知バナー（フォトコンポジション）"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="work-card__meta">
+            <span class="work-card__tag">Web広告・バナー</span>
+            <span class="work-card__title"
+              >セミナー告知バナー（16:9・フォトコンポジション）</span
+            >
+          </span>
+        </button>
+        <template>
+          <h3>セミナー告知バナー（16:9・フォトコンポジション）</h3>
+          <div class="modal__images">
+            <img
+              src="images/web-ad/webad_seminar_16x9.png"
+              alt="セミナー告知バナー（フォトコンポジション）"
+            />
+          </div>
+          <div class="modal__text">
+            <p>
+              <strong>制作意図:</strong>
+              オンラインセミナーの告知用バナーとして、白衣姿の人物写真と情報を左右に整理し、信頼感と開催情報の見やすさを両立させました。
+            </p>
+            <p><strong>デザインポイント:</strong></p>
+            <ul>
+              <li>
+                左側にテキスト情報、右側に人物写真を配置し、視線誘導を意識したレイアウト
+              </li>
+              <li>
+                帯（リボン）とベタ塗りブロックでタイトル・サブタイトル・日時の情報階層を明確化
+              </li>
+              <li>青系の配色で医療・健康分野らしい清潔感と信頼感を演出</li>
+            </ul>
+          </div>
+        </template>
+      </article>
 
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/web-ad/webad_illustration.png"
-          alt="Web広告バナー（イラストキャラクター訴求）"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <div class="caption">
-        <h3>Web広告バナー（イラストキャラクター訴求）</h3>
-        <p>
-          <strong>制作意図:</strong>
-          「知らないと損をするかもしれない」という不安をやわらかく伝えるため、写実的な写真ではなくイラストキャラクターを主役にしたバナーです。<br />
-          <strong>デザインポイント:</strong>
-        </p>
-        <ul class="caption-list">
-          <li>驚いた表情のキャラクターと下降矢印で「損失」のイメージを直感的に表現</li>
-          <li>チェックリストのアイコンを添えて、内容が整理された情報であることを補足</li>
-          <li>
-            上部の帯・下部のCTAボタンで縦の視線の流れを作り、最後にボタンへ誘導する構成
-          </li>
-        </ul>
-      </div>
-    </div>
+      <article class="work-card" data-category="web-ad">
+        <button type="button" class="work-card__trigger">
+          <span class="work-card__image">
+            <img
+              src="images/web-ad/webad_illustration.png"
+              alt="Web広告バナー（イラストキャラクター訴求）"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="work-card__meta">
+            <span class="work-card__tag">Web広告・バナー</span>
+            <span class="work-card__title"
+              >Web広告バナー（イラストキャラクター訴求）</span
+            >
+          </span>
+        </button>
+        <template>
+          <h3>Web広告バナー（イラストキャラクター訴求）</h3>
+          <div class="modal__images">
+            <img
+              src="images/web-ad/webad_illustration.png"
+              alt="Web広告バナー（イラストキャラクター訴求）"
+            />
+          </div>
+          <div class="modal__text">
+            <p>
+              <strong>制作意図:</strong>
+              「知らないと損をするかもしれない」という不安をやわらかく伝えるため、写実的な写真ではなくイラストキャラクターを主役にしたバナーです。
+            </p>
+            <p><strong>デザインポイント:</strong></p>
+            <ul>
+              <li>
+                驚いた表情のキャラクターと下降矢印で「損失」のイメージを直感的に表現
+              </li>
+              <li>
+                チェックリストのアイコンを添えて、内容が整理された情報であることを補足
+              </li>
+              <li>
+                上部の帯・下部のCTAボタンで縦の視線の流れを作り、最後にボタンへ誘導する構成
+              </li>
+            </ul>
+          </div>
+        </template>
+      </article>
 
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/web-ad/webad_ebook.png"
-          alt="資料ダウンロード訴求バナー（アイコン・モックアップ）"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <div class="caption">
-        <h3>資料ダウンロード訴求バナー（アイコン×冊子モックアップ）</h3>
-        <p>
-          <strong>制作意図:</strong>
-          無料配布資料のダウンロードを促すバナーとして、資料そのものの中身が伝わるよう表紙モックアップとアイコンを組み合わせました。<br />
-          <strong>デザインポイント:</strong>
-        </p>
-        <ul class="caption-list">
-          <li>
-            電卓・グラフ・薬のアイコンイラストで「調剤報酬」というテーマを視覚的に補足
-          </li>
-          <li>資料の表紙をモックアップ化し、もらえるものの内容を具体的にイメージさせる構成</li>
-          <li>グリーン系のグラデーションで「無償提供」というポジティブな印象を演出</li>
-        </ul>
-      </div>
-    </div>
+      <article class="work-card" data-category="web-ad">
+        <button type="button" class="work-card__trigger">
+          <span class="work-card__image">
+            <img
+              src="images/web-ad/webad_ebook.png"
+              alt="資料ダウンロード訴求バナー（アイコン・モックアップ）"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="work-card__meta">
+            <span class="work-card__tag">Web広告・バナー</span>
+            <span class="work-card__title"
+              >資料ダウンロード訴求バナー（アイコン×冊子モックアップ）</span
+            >
+          </span>
+        </button>
+        <template>
+          <h3>資料ダウンロード訴求バナー（アイコン×冊子モックアップ）</h3>
+          <div class="modal__images">
+            <img
+              src="images/web-ad/webad_ebook.png"
+              alt="資料ダウンロード訴求バナー（アイコン・モックアップ）"
+            />
+          </div>
+          <div class="modal__text">
+            <p>
+              <strong>制作意図:</strong>
+              無料配布資料のダウンロードを促すバナーとして、資料そのものの中身が伝わるよう表紙モックアップとアイコンを組み合わせました。
+            </p>
+            <p><strong>デザインポイント:</strong></p>
+            <ul>
+              <li>
+                電卓・グラフ・薬のアイコンイラストで「調剤報酬」というテーマを視覚的に補足
+              </li>
+              <li>
+                資料の表紙をモックアップ化し、もらえるものの内容を具体的にイメージさせる構成
+              </li>
+              <li>グリーン系のグラデーションで「無償提供」というポジティブな印象を演出</li>
+            </ul>
+          </div>
+        </template>
+      </article>
 
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/web-ad/webad_photo_alert.png"
-          alt="Web広告バナー（フォト×警告訴求）"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <div class="caption">
-        <h3>速報告知バナー（フォト×警告訴求）</h3>
-        <p>
-          <strong>制作意図:</strong>
-          制度改定の速報性と緊急性を伝えるため、悩む表情の人物写真と赤いCTAボタンを組み合わせ、「今すぐ確認したくなる」訴求を狙いました。<br />
-          <strong>デザインポイント:</strong>
-        </p>
-        <ul class="caption-list">
-          <li>右側に大きく人物写真を配置し、左側の帯テキストとのコントラストで緊張感を演出</li>
-          <li>半透明の黒帯でタイトル部分の可読性を確保しつつ背景の写真を活かす処理</li>
-          <li>赤いCTAボタンを右下に配置し、情報を読み終えた視線の終着点に誘導</li>
-        </ul>
-      </div>
-    </div>
+      <article class="work-card" data-category="web-ad">
+        <button type="button" class="work-card__trigger">
+          <span class="work-card__image">
+            <img
+              src="images/web-ad/webad_photo_alert.png"
+              alt="Web広告バナー（フォト×警告訴求）"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="work-card__meta">
+            <span class="work-card__tag">Web広告・バナー</span>
+            <span class="work-card__title">速報告知バナー（フォト×警告訴求）</span>
+          </span>
+        </button>
+        <template>
+          <h3>速報告知バナー（フォト×警告訴求）</h3>
+          <div class="modal__images">
+            <img
+              src="images/web-ad/webad_photo_alert.png"
+              alt="Web広告バナー（フォト×警告訴求）"
+            />
+          </div>
+          <div class="modal__text">
+            <p>
+              <strong>制作意図:</strong>
+              制度改定の速報性と緊急性を伝えるため、悩む表情の人物写真と赤いCTAボタンを組み合わせ、「今すぐ確認したくなる」訴求を狙いました。
+            </p>
+            <p><strong>デザインポイント:</strong></p>
+            <ul>
+              <li>
+                右側に大きく人物写真を配置し、左側の帯テキストとのコントラストで緊張感を演出
+              </li>
+              <li>半透明の黒帯でタイトル部分の可読性を確保しつつ背景の写真を活かす処理</li>
+              <li>赤いCTAボタンを右下に配置し、情報を読み終えた視線の終着点に誘導</li>
+            </ul>
+          </div>
+        </template>
+      </article>
 
-    <!-- Illustrator練習フライヤー -->
-    <h2>Illustrator 練習フライヤー</h2>
+      <!-- ============ Illustrator ============ -->
+      <article class="work-card" data-category="illustrator">
+        <button type="button" class="work-card__trigger">
+          <span class="work-card__image">
+            <img
+              src="images/flyer/flyer_sample.png"
+              alt="A4フライヤーデザイン"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="work-card__meta">
+            <span class="work-card__tag">Illustrator</span>
+            <span class="work-card__title"
+              >A4フライヤーデザイン（写真加工 × パス上文字 × ツートン背景）</span
+            >
+          </span>
+        </button>
+        <template>
+          <h3>A4フライヤーデザイン（写真加工 × パス上文字 × ツートン背景）</h3>
+          <div class="modal__images">
+            <img src="images/flyer/flyer_sample.png" alt="A4フライヤーデザイン" />
+          </div>
+          <div class="modal__text">
+            <p>
+              Adobe
+              Illustratorを使用し、架空のクライアントから提供された写真・ロゴ・原稿をもとに
+              <strong>実務のワークフローに沿って制作したA4サイズのフライヤー</strong
+              >です。
+              メインビジュアルのマスク処理、パスに沿った文字配置、背景のツートン加工など、
+              フライヤー制作に必要な一連の操作を体系的に学びながらデザインしました。
+            </p>
+            <p><strong>制作手順・作業ポイント:</strong></p>
+            <ul>
+              <li>
+                新規ドキュメントをCMYK／A4サイズで作成し、塗り足し用にパスのオフセット（3mm）を適用
+              </li>
+              <li>
+                メイン写真を配置し、楕円形のクリッピングマスクで視線が集まる構図に調整
+              </li>
+              <li>
+                パス上文字ツールを使用し、楕円パスの外周にキャッチコピーを弧状にレイアウト
+              </li>
+              <li>書体、文字詰め（カーニング・トラッキング）を調整し視認性を最適化</li>
+              <li>
+                詳細情報（住所・電話番号・メール・URL）は階層整理しセンター揃えで配置
+              </li>
+              <li>URLのみ別オブジェクトにし、太さ・文字サイズを変えて視線誘導を強化</li>
+              <li>
+                背景は「グリッドに分割」で上下2色のツートンにし、スポイトで写真の色から抽出
+              </li>
+              <li>
+                全体の重心を「やや上」に寄せて余白を確保し、A4フライヤーとしてのバランスを調整
+              </li>
+            </ul>
+            <p>
+              写真の切り抜き、フォント選定、文字の読みやすさ、色の抽出など、
+              <strong>実務のフライヤー制作に必要な工程を一通り経験した作品</strong
+              >です。
+            </p>
+          </div>
+        </template>
+      </article>
 
-    <!-- Illustrator作品（フライヤーデザイン） -->
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/flyer/flyer_sample.png"
-          alt="A4フライヤーデザイン"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
+      <article class="work-card" data-category="illustrator">
+        <button type="button" class="work-card__trigger">
+          <span class="work-card__image">
+            <img
+              src="images/logo/kuzure.png"
+              alt="Illustrator 崩ロゴ"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="work-card__meta">
+            <span class="work-card__tag">Illustrator</span>
+            <span class="work-card__title"
+              >「崩」ロゴ（テクスチャ・クラウンツール練習）</span
+            >
+          </span>
+        </button>
+        <template>
+          <h3>「崩」ロゴ（テクスチャ・クラウンツール練習）</h3>
+          <div class="modal__images">
+            <img src="images/logo/kuzure.png" alt="Illustrator 崩ロゴ" />
+          </div>
+          <div class="modal__text">
+            <p>
+              文字「崩」をモチーフに、Illustratorのテクスチャ処理やクラウンツールによる
+              <strong>形状のランダム変形・ニュアンス調整</strong
+              >を学ぶ目的で制作したロゴです。
+              パスの基本操作に加え、質感表現や手描き風の揺らぎを加えることをテーマにしています。
+            </p>
+            <p><strong>学習ポイント:</strong></p>
+            <ul>
+              <li>クラウンツールを使用したアウトラインのランダム変形</li>
+              <li>テクスチャ（グランジ系）の適用による質感づけ</li>
+              <li>パスの微調整と太さのバランス調整</li>
+              <li>文字ロゴとして視認性を保ちつつ、崩れ感を演出</li>
+            </ul>
+            <p>ふだんのロゴ制作とは異なる「崩す表現」を学ぶためのトレーニング作品です。</p>
+          </div>
+        </template>
+      </article>
 
-      <div class="caption">
-        <h3>A4フライヤーデザイン（写真加工 × パス上文字 × ツートン背景）</h3>
+      <article class="work-card" data-category="illustrator">
+        <button type="button" class="work-card__trigger">
+          <span class="work-card__image">
+            <img
+              src="images/logo/design_logo.png"
+              alt="Illustrator 練習ロゴ"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="work-card__meta">
+            <span class="work-card__tag">Illustrator</span>
+            <span class="work-card__title">「DESIGN」ロゴ（パスファインダー練習）</span>
+          </span>
+        </button>
+        <template>
+          <h3>「DESIGN」ロゴ（パスファインダー練習）</h3>
+          <div class="modal__images">
+            <img src="images/logo/design_logo.png" alt="Illustrator 練習ロゴ" />
+          </div>
+          <div class="modal__text">
+            <p>
+              「DESIGN」の文字をモチーフに、Illustratorの基本操作に慣れるための
+              トレーニングとして制作したロゴです。
+              特定のブランドやコンセプトに基づくものではなく、
+              <strong>パスファインダー・パスの編集・整列機能</strong>
+              の基礎習得を目的としています。
+            </p>
+            <p><strong>学習ポイント:</strong></p>
+            <ul>
+              <li>パスファインダー（合体・分割・型抜き）による形状づくり</li>
+              <li>文字のアウトライン化とパス調整によるロゴ化の基礎</li>
+            </ul>
+            <p>Illustratorの操作理解を深めるための基礎練習として制作しました。</p>
+          </div>
+        </template>
+      </article>
 
-        <p>
-          Adobe
-          Illustratorを使用し、架空のクライアントから提供された写真・ロゴ・原稿をもとに
-          <strong>実務のワークフローに沿って制作したA4サイズのフライヤー</strong
-          >です。<br />
-          メインビジュアルのマスク処理、パスに沿った文字配置、背景のツートン加工など、
-          フライヤー制作に必要な一連の操作を体系的に学びながらデザインしました。
-        </p>
+      <article class="work-card" data-category="illustrator">
+        <button type="button" class="work-card__trigger">
+          <span class="work-card__image">
+            <img
+              src="images/cafe_menu.png"
+              alt="カフェメニューデザイン"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="work-card__meta">
+            <span class="work-card__tag">Illustrator</span>
+            <span class="work-card__title">カフェ メニュー表</span>
+          </span>
+        </button>
+        <template>
+          <h3>カフェ メニュー表</h3>
+          <div class="modal__images">
+            <img src="images/cafe_menu.png" alt="カフェメニューデザイン" />
+            <img src="images/cafe_menu2.png" alt="メニュー表 裏面" />
+          </div>
+          <div class="modal__text">
+            <p>
+              <strong>制作意図:</strong>
+              コーヒーのほか、様々なお茶をゆっくり楽しめるカフェのメニュー表として制作しました。
+              「落ち着いた店内で、飲み物を選ぶ時間もくつろぎの一部になる」ことを意識しています。
+            </p>
+            <p>
+              <strong>コンセプト:</strong>
+              店内の落ち着いた雰囲気に合わせて、全体は余白を多めに残したシンプルなレイアウトに。
+              パスのオフセットで余白を -15mm
+              に設定することで、ゆったりとした余裕を感じさせる紙面構成としました。
+            </p>
+            <p><strong>デザインポイント:</strong></p>
+            <ul>
+              <li>
+                コーヒーだけでなく、様々なお茶（紅茶・ハーブティーなど）が並ぶことが一目で伝わるように、カテゴリーごとに整理して配置。
+              </li>
+              <li>
+                タブパネル機能を使い、メニュー名と値段の位置をきれいに揃えることで、視線の流れをスムーズにしました。
+              </li>
+              <li>
+                リーダー（……の点線）でメニュー名と価格の間を埋め、情報同士の関連性を視覚的に結びつけながらも読みやすさを確保。
+              </li>
+              <li>
+                円形のマークや「ICE /
+                HOT」の表記は、垂直比率・水平比率を調整して小さめにし、文字揃えを整えることで、情報が詰まりすぎない落ち着いた印象に。
+              </li>
+            </ul>
+            <p>
+              <strong>使用ツール・工夫:</strong>
+              Adobe
+              Illustrator／パスのオフセット機能やタブ、リーダー機能を用いて制作しました。
+            </p>
+          </div>
+        </template>
+      </article>
 
-        <strong>制作手順・作業ポイント:</strong>
-        <ul class="caption-list">
-          <li>
-            新規ドキュメントをCMYK／A4サイズで作成し、塗り足し用にパスのオフセット（3mm）を適用
-          </li>
-          <li>
-            メイン写真を配置し、楕円形のクリッピングマスクで視線が集まる構図に調整
-          </li>
-          <li>
-            パス上文字ツールを使用し、楕円パスの外周にキャッチコピーを弧状にレイアウト
-          </li>
-          <li>
-            書体、文字詰め（カーニング・トラッキング）を調整し視認性を最適化
-          </li>
-          <li>
-            詳細情報（住所・電話番号・メール・URL）は階層整理しセンター揃えで配置
-          </li>
-          <li>
-            URLのみ別オブジェクトにし、太さ・文字サイズを変えて視線誘導を強化
-          </li>
-          <li>
-            背景は「グリッドに分割」で上下2色のツートンにし、スポイトで写真の色から抽出
-          </li>
-          <li>
-            全体の重心を「やや上」に寄せて余白を確保し、A4フライヤーとしてのバランスを調整
-          </li>
-        </ul>
+      <!-- ============ Photoshop ============ -->
+      <article class="work-card" data-category="photoshop">
+        <button type="button" class="work-card__trigger">
+          <span class="work-card__image">
+            <img
+              src="images/banner.jpg"
+              alt="マクドナルド月見バナーモックアップ"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="work-card__meta">
+            <span class="work-card__tag">Photoshop</span>
+            <span class="work-card__title">マクドナルド「月見」シリーズバナー 模写</span>
+          </span>
+        </button>
+        <template>
+          <h3>マクドナルド「月見」シリーズバナー 模写</h3>
+          <div class="modal__images">
+            <img src="images/banner.jpg" alt="マクドナルド月見バナーモックアップ" />
+          </div>
+          <div class="modal__text">
+            <p>
+              <strong>制作意図:</strong>
+              Photoshopのレタッチ・合成・光の調整の基礎を実践的に身につけるため、
+              マクドナルドの「月見」シリーズのバナーを模写制作しました。
+              配置や光の方向、陰影、テクスチャ表現などを忠実に再現し、
+              実際のプロモーションバナーの質感に近づけることを目標としました。
+            </p>
+            <p><strong>作業ポイント:</strong></p>
+            <ul>
+              <li>月の光を自然に見せるために、Camera Raw フィルターでライトを調整。</li>
+              <li>ハンバーガー写真はレイヤーマスクと調整レイヤーで柔らかく切り抜き。</li>
+              <li>テーブルの木目は画像素材を変形し、質感の方向を整えて馴染ませた。</li>
+            </ul>
+            <p>
+              <strong>使用ツール:</strong>
+              Adobe Photoshop（レイヤーマスク、Camera
+              Raw、スマートオブジェクト、ブラシ設定 ほか）
+            </p>
+          </div>
+        </template>
+      </article>
 
-        <p>
-          写真の切り抜き、フォント選定、文字の読みやすさ、色の抽出など、
-          <strong>実務のフライヤー制作に必要な工程を一通り経験した作品</strong
-          >です。
-        </p>
-      </div>
-    </div>
+      <!-- ============ Figma ============ -->
+      <article class="work-card" data-category="figma">
+        <button type="button" class="work-card__trigger">
+          <span class="work-card__image">
+            <img
+              src="images/figma/figma_renshu.png"
+              alt="Figma作品1"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="work-card__meta">
+            <span class="work-card__tag">Figma</span>
+            <span class="work-card__title">UI模写練習1（途中）</span>
+          </span>
+        </button>
+        <template>
+          <h3>UI模写練習1（途中）</h3>
+          <div class="modal__images">
+            <img src="images/figma/figma_renshu.png" alt="Figma作品1" />
+          </div>
+          <div class="modal__text">
+            <p>
+              <strong>制作意図:</strong>
+              WebサイトのUI模写を通して、Figma操作の習熟とレイアウト理解を深めるために制作しました。
+            </p>
+            <p>
+              <strong>こだわり:</strong>
+              8pxグリッドを基準に、余白・ボタンサイズ・テキスト間隔を正確に再現しています。さらに、Figmaの制約機能を活用し、画面サイズが変わってもレイアウトが崩れないように設計しています。これにより、レスポンシブデザインを意識したUI再現を実現しています。
+            </p>
+            <p><strong>学び:</strong></p>
+            <ul>
+              <li>グリッドを意識することで統一感が生まれることを学びました。</li>
+              <li>情報の優先度に応じた余白調整の重要性を実感しました。</li>
+              <li>Figmaでのレイヤー整理とコンポーネント活用の大切さを再認識しました。</li>
+              <li>
+                制約設定により、要素の位置関係を維持しつつ柔軟にサイズ変更できることを確認しました。
+              </li>
+            </ul>
+          </div>
+        </template>
+      </article>
 
-    <!-- Illustrator練習ロゴ -->
-    <h2>Illustrator 練習ロゴ</h2>
-    <p>
-      Illustratorのパスファインダー操作を中心に、基本ツール習熟を目的として制作したロゴです。
-    </p>
-
-    <!-- Illustrator練習ロゴ（崩ロゴ追加） -->
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/logo/kuzure.png"
-          alt="Illustrator 崩ロゴ"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-
-      <div class="caption">
-        <h3>「崩」ロゴ（テクスチャ・クラウンツール練習）</h3>
-        <p>
-          文字「崩」をモチーフに、Illustratorのテクスチャ処理やクラウンツールによる
-          <strong>形状のランダム変形・ニュアンス調整</strong
-          >を学ぶ目的で制作したロゴです。<br />
-          パスの基本操作に加え、質感表現や手描き風の揺らぎを加えることをテーマにしています。
-        </p>
-
-        <strong>学習ポイント:</strong>
-        <ul class="caption-list">
-          <li>クラウンツールを使用したアウトラインのランダム変形</li>
-          <li>テクスチャ（グランジ系）の適用による質感づけ</li>
-          <li>パスの微調整と太さのバランス調整</li>
-          <li>文字ロゴとして視認性を保ちつつ、崩れ感を演出</li>
-        </ul>
-
-        <p>
-          ふだんのロゴ制作とは異なる「崩す表現」を学ぶためのトレーニング作品です。
-        </p>
-      </div>
-    </div>
-    <!-- Illustrator練習ロゴ（2文字ロゴ追加） -->
-    <!-- <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/logo/letter_combo_logo.png"
-          alt="2つのアルファベットを組み合わせたロゴ"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-
-      <div class="caption">
-        <h3>2文字ロゴ（アルファベット組み合わせロゴ）</h3>
-        <p>
-          2つのアルファベットを組み合わせて、
-          1つのロゴとして見せることを目的に制作したIllustratorの練習作品です。<br />
-          アウトライン化した文字にパスのオフセットで太さを持たせ、シェイプ形成ツールで不要な部分を削除することで、
-          <strong>文字同士の前後関係やくぐらせ表現</strong>を作り出しています。
-        </p>
-
-        <strong>作業手順:</strong>
-        <ul class="caption-list">
-          <li>任意の2文字を入力し、書体や太さを検討した上でアウトライン化</li>
-          <li>
-            パスのオフセット機能で外側に太さを足し、ロゴとして見えるボリュームを調整
-          </li>
-          <li>
-            文字同士が重なる位置を意識しながら、シェイプ形成ツールでパーツを整理
-          </li>
-          <li>
-            オプションキー（Altキー）を押しながらクリックし、不要な部分だけを削除して隙間を作成
-          </li>
-        </ul>
-
-        <strong>学習ポイント:</strong>
-        <ul class="caption-list">
-          <li>
-            シェイプ形成ツールで複数の文字パーツを直感的に結合・削除するワークフロー
-          </li>
-          <li>
-            最後にパーツを結合し、余計なアンカーポイントを整理することでクリーンなロゴデータに仕上げる工程
-          </li>
-        </ul>
-
-        <p>
-          単なる文字列ではなく、<strong>複数の文字を一体化させてロゴとして組み立てるプロセス</strong>を通して、
-          パス操作とシェイプ形成ツールの実務的な使い方を学んだ作品です。
-        </p>
-      </div>
-    </div> -->
-
-    <!-- Illustrator練習ロゴ（パイナップルロゴ追加） -->
-    <!-- <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/logo/pineapple_logo.png"
-          alt="Illustrator パイナップルロゴ"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-
-      <div class="caption">
-        <h3>「Pineapple」ロゴ（エンベロープ × シルエット変形）</h3>
-        <p>
-          パイナップルのシルエットの中に英語文字を配置し、<strong>エンベローブ機能</strong>によって
-          形状に沿わせて文字を変形させたロゴです。<br />
-          文字とシルエットを組み合わせたロゴ制作の練習として、<strong>最前面のオブジェクトで作成</strong>を使用し、
-          立体的で楽しい印象を持つフルーツロゴとして仕上げました。
-        </p>
-
-        <strong>学習ポイント:</strong>
-        <ul class="caption-list">
-          <li>
-            シルエットの上にテキストを重ね、<strong
-              >オブジェクト → エンベローブ → 最前面のオブジェクトで作成</strong
-            >を使用
-          </li>
-        </ul>
-
-        <p>
-          シルエットと英字を一体化させたロゴ制作の応用練習として制作しました。
-        </p>
-      </div>
-    </div> -->
-
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/logo/design_logo.png"
-          alt="Illustrator 練習ロゴ"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-
-      <div class="caption">
-        <h3>「DESIGN」ロゴ（パスファインダー練習）</h3>
-        <p>
-          「DESIGN」の文字をモチーフに、Illustratorの基本操作に慣れるための
-          トレーニングとして制作したロゴです。<br />
-          特定のブランドやコンセプトに基づくものではなく、
-          <strong>パスファインダー・パスの編集・整列機能</strong>
-          の基礎習得を目的としています。
-        </p>
-
-        <strong>学習ポイント:</strong>
-        <ul class="caption-list">
-          <li>パスファインダー（合体・分割・型抜き）による形状づくり</li>
-          <li>文字のアウトライン化とパス調整によるロゴ化の基礎</li>
-        </ul>
-
-        <p>Illustratorの操作理解を深めるための基礎練習として制作しました。</p>
-      </div>
-    </div>
-
-    <!-- Photoshop作品：マクドナルド月見バナー -->
-    <h2>Photoshop作品（マクドナルド「月見」バナー模写）</h2>
-    <p>Photoshopでトレーニングとして制作したバナー模写です。</p>
-
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/banner.jpg"
-          alt="マクドナルド月見バナーモックアップ"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-
-      <div class="caption">
-        <h3>マクドナルド「月見」シリーズバナー 模写</h3>
-
-        <p>
-          <strong>制作意図:</strong><br />
-          Photoshopのレタッチ・合成・光の調整の基礎を実践的に身につけるため、
-          マクドナルドの「月見」シリーズのバナーを模写制作しました。<br />
-          配置や光の方向、陰影、テクスチャ表現などを忠実に再現し、
-          実際のプロモーションバナーの質感に近づけることを目標としました。
-        </p>
-
-        <p>
-          <strong>作業ポイント:</strong>
-        </p>
-        <ul class="caption-list">
-          <li>
-            月の光を自然に見せるために、Camera Raw フィルターでライトを調整。
-          </li>
-          <li>
-            ハンバーガー写真はレイヤーマスクと調整レイヤーで柔らかく切り抜き。
-          </li>
-          <li>
-            テーブルの木目は画像素材を変形し、質感の方向を整えて馴染ませた。
-          </li>
-        </ul>
-        <p>
-          <strong>使用ツール:</strong><br />
-          Adobe Photoshop（レイヤーマスク、Camera
-          Raw、スマートオブジェクト、ブラシ設定 ほか）
-        </p>
-      </div>
-    </div>
-
-    <!-- Illustrator作品（カフェメニュー） -->
-    <h2>Illustrator作品（カフェメニュー）</h2>
-    <p>カフェのメニュー表デザインです。</p>
-
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/cafe_menu.png"
-          alt="カフェメニューデザイン"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <div class="work-image">
-        <img
-          src="images/cafe_menu2.png"
-          alt="メニュー表 裏面"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <div class="caption">
-        <h3>カフェ メニュー表</h3>
-        <strong>制作意図:</strong>
-        コーヒーのほか、様々なお茶をゆっくり楽しめるカフェのメニュー表として制作しました。
-        「落ち着いた店内で、飲み物を選ぶ時間もくつろぎの一部になる」ことを意識しています。<br />
-
-        <strong>コンセプト:</strong>
-        店内の落ち着いた雰囲気に合わせて、全体は余白を多めに残したシンプルなレイアウトに。
-        パスのオフセットで余白を -15mm
-        に設定することで、ゆったりとした余裕を感じさせる紙面構成としました。<br />
-
-        <strong>デザインポイント:</strong>
-        <ul class="caption-list">
-          <li>
-            コーヒーだけでなく、様々なお茶（紅茶・ハーブティーなど）が並ぶことが一目で伝わるように、カテゴリーごとに整理して配置。
-          </li>
-          <li>
-            タブパネル機能を使い、メニュー名と値段の位置をきれいに揃えることで、視線の流れをスムーズにしました。
-          </li>
-          <li>
-            リーダー（……の点線）でメニュー名と価格の間を埋め、情報同士の関連性を視覚的に結びつけながらも読みやすさを確保。
-          </li>
-          <li>
-            円形のマークや「ICE /
-            HOT」の表記は、垂直比率・水平比率を調整して小さめにし、文字揃えを整えることで、情報が詰まりすぎない落ち着いた印象に。
-          </li>
-        </ul>
-
-        <strong>使用ツール・工夫:</strong>
-        Adobe
-        Illustrator／パスのオフセット機能やタブ、リーダー機能を用いて制作しました。
-      </div>
-    </div>
-
-    <!-- バナー作品 -->
-    <!-- <h2>バナー作品</h2>
-    <p>練習用に制作した架空のバナーです。</p>
-
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/banner_opencanpas.png"
-          alt="専門学校オープンキャンパスバナー"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <div class="caption">
-        <h3>専門学校オープンキャンパス告知バナー</h3>
-        <p>
-          <strong>制作意図:</strong>
-          秋に開催されるオープンキャンパスへの誘導と、親しみやすい学校の雰囲気作り。<br />
-          <strong>コンセプト:</strong>
-          「アートの秋」をテーマに、暖色系（オレンジ、ブラウンなど）で全体をまとめ、落ち着きと創作意欲が湧くようなトーンを意識しました。<br />
-          <strong>デザインポイント:</strong>
-          アート系の学校であることを示すため、服装やポーズに個性を持つ女性をメインビジュアルに採用しました。
-        </p>
-      </div>
-    </div> -->
-
-    <!-- Figma作品 -->
-    <h2>Figma 練習作品</h2>
-    <p>Figmaで作った練習中のデザインです。</p>
-
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/figma/figma_renshu.png"
-          alt="Figma作品1"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <div class="caption">
-        <h3>UI模写練習1（途中）</h3>
-        <p>
-          <strong>制作意図:</strong>
-          WebサイトのUI模写を通して、Figma操作の習熟とレイアウト理解を深めるために制作しました。<br />
-          <strong>こだわり:</strong>
-          8pxグリッドを基準に、余白・ボタンサイズ・テキスト間隔を正確に再現しています。さらに、Figmaの制約機能を活用し、画面サイズが変わってもレイアウトが崩れないように設計しています。これにより、レスポンシブデザインを意識したUI再現を実現しています。<br />
-        </p>
-        <strong>学び:</strong>
-        <ul class="caption-list">
-          <li>グリッドを意識することで統一感が生まれることを学びました。</li>
-          <li>情報の優先度に応じた余白調整の重要性を実感しました。</li>
-          <li>
-            Figmaでのレイヤー整理とコンポーネント活用の大切さを再認識しました。
-          </li>
-          <li>
-            制約設定により、要素の位置関係を維持しつつ柔軟にサイズ変更できることを確認しました。
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <div class="work-image">
-        <img
-          src="images/figma/figma_renshu2.png"
-          alt="Figma作品2"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <div class="caption">
-        <h3>Figmaアイコン模写</h3>
-        <p>Figmaでのアイコン模写練習。パス編集・整列の精度を意識しました。</p>
-      </div>
-    </div>
+      <article class="work-card" data-category="figma">
+        <button type="button" class="work-card__trigger">
+          <span class="work-card__image">
+            <img
+              src="images/figma/figma_renshu2.png"
+              alt="Figma作品2"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="work-card__meta">
+            <span class="work-card__tag">Figma</span>
+            <span class="work-card__title">Figmaアイコン模写</span>
+          </span>
+        </button>
+        <template>
+          <h3>Figmaアイコン模写</h3>
+          <div class="modal__images">
+            <img src="images/figma/figma_renshu2.png" alt="Figma作品2" />
+          </div>
+          <div class="modal__text">
+            <p>Figmaでのアイコン模写練習。パス編集・整列の精度を意識しました。</p>
+          </div>
+        </template>
+      </article>
+    </main>
 
     <!-- 画像モーダル -->
     <div class="modal" id="imageModal" aria-hidden="true">
       <div class="modal__overlay"></div>
       <div class="modal__content">
         <button class="modal__close" aria-label="閉じる">&times;</button>
-        <img src="" alt="" id="modalImage" />
+        <div class="modal__body" id="modalBody"></div>
       </div>
     </div>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("modalImage");
+        const modalBody = document.getElementById("modalBody");
         const closeBtn = document.querySelector(".modal__close");
         const overlay = document.querySelector(".modal__overlay");
 
-        // すべての作品画像にクリックイベントを付与
-        document.querySelectorAll(".work-image img").forEach((img) => {
-          img.style.cursor = "pointer";
-          img.addEventListener("click", () => {
-            modal.classList.add("is-active");
-            modalImg.src = img.src;
-            modalImg.alt = img.alt || "";
-            modal.setAttribute("aria-hidden", "false");
-          });
-        });
+        const openModal = (template) => {
+          modalBody.innerHTML = "";
+          modalBody.appendChild(template.content.cloneNode(true));
+          modal.classList.add("is-active");
+          modal.setAttribute("aria-hidden", "false");
+        };
 
         const closeModal = () => {
           modal.classList.remove("is-active");
           modal.setAttribute("aria-hidden", "true");
-          modalImg.src = "";
+          modalBody.innerHTML = "";
         };
+
+        // カードクリックでモーダルに詳細を表示
+        document.querySelectorAll(".work-card").forEach((card) => {
+          const trigger = card.querySelector(".work-card__trigger");
+          const template = card.querySelector("template");
+          trigger.addEventListener("click", () => openModal(template));
+        });
 
         closeBtn.addEventListener("click", closeModal);
         overlay.addEventListener("click", closeModal);
@@ -581,6 +613,23 @@
           if (e.key === "Escape") {
             closeModal();
           }
+        });
+
+        // カテゴリフィルター
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const cards = document.querySelectorAll(".work-card");
+
+        filterButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            filterButtons.forEach((b) => b.classList.remove("is-active"));
+            btn.classList.add("is-active");
+
+            const filter = btn.dataset.filter;
+            cards.forEach((card) => {
+              const show = filter === "all" || card.dataset.category === filter;
+              card.style.display = show ? "" : "none";
+            });
+          });
         });
       });
     </script>

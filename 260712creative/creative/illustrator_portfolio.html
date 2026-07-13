@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Illustrator制作ポートフォリオ</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text-main: #1a1a1a;
+    --text-sub: #666666;
+    --accent: #0093d3;
+    --card-bg: #f9f9f9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text-main);
+    line-height: 1.8;
+  }
+  header {
+    padding: 80px 40px 40px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  header .tag {
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 1.2rem;
+  }
+  header h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 300;
+    font-size: clamp(28px, 4vw, 44px);
+    margin: 0 0 1rem;
+    letter-spacing: 0.05em;
+  }
+  header p {
+    color: var(--text-sub);
+    font-weight: 300;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .tools {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 1.8rem;
+    flex-wrap: wrap;
+  }
+  .tools span {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    border: 1px solid #ddd;
+    padding: 6px 16px;
+    border-radius: 999px;
+    color: var(--text-sub);
+  }
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px 100px;
+  }
+  .group-title {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 60px 0 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+  }
+  main > .group-title:first-child {
+    margin-top: 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    background: #fff;
+    display: block;
+  }
+  .cap {
+    font-size: 12px;
+    color: var(--text-sub);
+    padding: 10px 14px 14px;
+    margin: 0;
+    font-weight: 300;
+  }
+  footer {
+    text-align: center;
+    padding: 60px 40px;
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <span class="tag">ILLUSTRATOR DESIGN PORTFOLIO</span>
+    <h1>制作物コレクション</h1>
+    <p>資料請求LP、セミナー告知バナー、社内研修告知、YouTubeサムネイル、販促物など、Illustratorで制作したデザイン一覧。</p>
+    <div class="tools">
+      <span>Adobe Illustrator</span>
+    </div>
+  </header>
+
+  <main>
+    <h2 class="group-title">資料請求LP</h2><div class="grid">
+
+      <div class="card">
+        <img src="document_request/251222_5分で読める年末年始、これだけは知っておきたい調剤報酬改定ミニBOOK.png" alt="5分で読める年末年始、これだけは知っておきたい調剤報酬改定ミニBOOK" loading="lazy">
+        <p class="cap">5分で読める年末年始、これだけは知っておきたい調剤報酬改定ミニBOOK</p>
+      </div>
+
+      <div class="card">
+        <img src="document_request/260311_隠れ変更点に注意！『調剤報酬改定の全体像＆対策ガイド』無償提供.png" alt="隠れ変更点に注意！『調剤報酬改定の全体像＆対策ガイド』無償提供" loading="lazy">
+        <p class="cap">隠れ変更点に注意！『調剤報酬改定の全体像＆対策ガイド』無償提供</p>
+      </div>
+
+      <div class="card">
+        <img src="document_request/260313_点数減・要件厳格化・大幅変更点を解説2026年-調剤報酬改定薬局生存戦略シリーズ【全10回】.png" alt="点数減・要件厳格化・大幅変更点を解説 2026年 調剤報酬改定薬局生存戦略シリーズ【全10回】" loading="lazy">
+        <p class="cap">点数減・要件厳格化・大幅変更点を解説 2026年 調剤報酬改定薬局生存戦略シリーズ【全10回】</p>
+      </div>
+
+      <div class="card">
+        <img src="document_request/260318_改定対策オンライン出張セミナーのご案内無償にて改定研修を代行いたします.png" alt="改定対策オンライン出張セミナーのご案内 無償にて改定研修を代行いたします" loading="lazy">
+        <p class="cap">改定対策オンライン出張セミナーのご案内 無償にて改定研修を代行いたします</p>
+      </div>
+
+      <div class="card">
+        <img src="document_request/260408_【30社限定】補助金申請支援を無償支援いたします.png" alt="【30社限定】補助金申請支援を無償支援いたします" loading="lazy">
+        <p class="cap">【30社限定】補助金申請支援を無償支援いたします</p>
+      </div>
+
+      <div class="card">
+        <img src="document_request/260409_【50社限定】賃金改善実績報告書（ベア評価+支援金）の作成を無償支援いたします.png" alt="【50社限定】賃金改善実績報告書（ベア評価+支援金）の作成を無償支援いたします" loading="lazy">
+        <p class="cap">【50社限定】賃金改善実績報告書（ベア評価+支援金）の作成を無償支援いたします</p>
+      </div>
+
+      <div class="card">
+        <img src="document_request/260409_【無償支援】本年のセキュリティ研修・セキュリティ対策を無償支援いたします.png" alt="【無償支援】本年のセキュリティ研修・セキュリティ対策を無償支援いたします" loading="lazy">
+        <p class="cap">【無償支援】本年のセキュリティ研修・セキュリティ対策を無償支援いたします</p>
+      </div>
+</div>
+<h2 class="group-title">限定セミナー訴求</h2><div class="grid">
+
+      <div class="card">
+        <img src="limited/260122_令和8年度-調剤報酬改定ガイド.png" alt="令和8年度 調剤報酬改定ガイド" loading="lazy">
+        <p class="cap">令和8年度 調剤報酬改定ガイド</p>
+      </div>
+
+      <div class="card">
+        <img src="limited/260212調剤報酬改定生成AIでカンタン理解！_samune.png" alt="調剤報酬改定 生成AIでカンタン理解！" loading="lazy">
+        <p class="cap">調剤報酬改定 生成AIでカンタン理解！</p>
+      </div>
+
+      <div class="card">
+        <img src="limited/260226令和８年度調剤報酬改定点数まるわかりガイド_samune.png" alt="令和８年度調剤報酬改定 点数まるわかりガイド" loading="lazy">
+        <p class="cap">令和８年度調剤報酬改定 点数まるわかりガイド</p>
+      </div>
+
+      <div class="card">
+        <img src="limited/260324＼疑問点を解消／令和8年度-調剤報酬改定最新情報＆対策セミナー_samune.png" alt="疑問点を解消 令和8年度 調剤報酬改定最新情報＆対策セミナー" loading="lazy">
+        <p class="cap">疑問点を解消 令和8年度 調剤報酬改定最新情報＆対策セミナー</p>
+      </div>
+
+      <div class="card">
+        <img src="limited/260414_【30分で整理】ベースアップ評価料の“よくある疑問”を一気に解消.png" alt="【30分で整理】ベースアップ評価料の“よくある疑問”を一気に解消" loading="lazy">
+        <p class="cap">【30分で整理】ベースアップ評価料の“よくある疑問”を一気に解消</p>
+      </div>
+</div>
+<h2 class="group-title">社内研修告知</h2><div class="grid">
+
+      <div class="card">
+        <img src="membership/260205NEW全従業員対象AIリスキリング研修.png" alt="全従業員対象 AIリスキリング研修" loading="lazy">
+        <p class="cap">全従業員対象 AIリスキリング研修</p>
+      </div>
+
+      <div class="card">
+        <img src="membership/260205全従業員対象情報セキュリティ研修.png" alt="全従業員対象 情報セキュリティ研修" loading="lazy">
+        <p class="cap">全従業員対象 情報セキュリティ研修</p>
+      </div>
+
+      <div class="card">
+        <img src="membership/260205薬剤師対象医療安全研修.png" alt="薬剤師対象 医療安全研修" loading="lazy">
+        <p class="cap">薬剤師対象 医療安全研修</p>
+      </div>
+</div>
+<h2 class="group-title">セミナー告知バナー</h2><div class="grid">
+
+      <div class="card">
+        <img src="seminar/251216_どうなる？調剤報酬改定と2026年の薬局業界.png" alt="どうなる？調剤報酬改定と2026年の薬局業界" loading="lazy">
+        <p class="cap">どうなる？調剤報酬改定と2026年の薬局業界</p>
+      </div>
+
+      <div class="card">
+        <img src="seminar/260205業界初、調剤報酬改定を生成AIが解説する動画を公開.png" alt="業界初、調剤報酬改定を生成AIが解説する動画を公開" loading="lazy">
+        <p class="cap">業界初、調剤報酬改定を生成AIが解説する動画を公開</p>
+      </div>
+
+      <div class="card">
+        <img src="seminar/260220【実施義務｜3月まで】情報セキュリティ研修、今年度分はお済みですか？.png" alt="【実施義務｜3月まで】情報セキュリティ研修、今年度分はお済みですか？" loading="lazy">
+        <p class="cap">【実施義務｜3月まで】情報セキュリティ研修、今年度分はお済みですか？</p>
+      </div>
+
+      <div class="card">
+        <img src="seminar/20251208_LP【緊急開催】23万円支給を解説.png" alt="【緊急開催】23万円支給を解説" loading="lazy">
+        <p class="cap">【緊急開催】23万円支給を解説</p>
+      </div>
+
+      <div class="card">
+        <img src="seminar/260116_｢調剤はマイナス｣の真意とは？報酬改定対策を徹底解説（厚労省側の視点にて）～-特別講師：東京薬科大学-益山光一教授-～.png" alt="「調剤はマイナス」の真意とは？報酬改定対策を徹底解説（特別講師：東京薬科大学 益山光一教授）" loading="lazy">
+        <p class="cap">「調剤はマイナス」の真意とは？報酬改定対策を徹底解説（特別講師：東京薬科大学 益山光一教授）</p>
+      </div>
+</div>
+<h2 class="group-title">YouTubeサムネイル</h2><div class="grid">
+
+      <div class="card">
+        <img src="yt_thumbnail/thumbnail_v1_drastic_change.png" alt="衝撃の改定内容" loading="lazy">
+        <p class="cap">衝撃の改定内容</p>
+      </div>
+
+      <div class="card">
+        <img src="yt_thumbnail/thumbnail_v4_sold_out.png" alt="申込み殺到、受付終了間近" loading="lazy">
+        <p class="cap">申込み殺到、受付終了間近</p>
+      </div>
+
+      <div class="card">
+        <img src="yt_thumbnail/thumbnail_v6_profit_up.png" alt="利益アップの秘訣" loading="lazy">
+        <p class="cap">利益アップの秘訣</p>
+      </div>
+
+      <div class="card">
+        <img src="yt_thumbnail/thumbnail_v9_april_strategy.png" alt="4月からの経営戦略" loading="lazy">
+        <p class="cap">4月からの経営戦略</p>
+      </div>
+
+      <div class="card">
+        <img src="yt_thumbnail/260410_seriesvideo1_samune.png" alt="シリーズ動画 第1回" loading="lazy">
+        <p class="cap">シリーズ動画 第1回</p>
+      </div>
+</div>
+<h2 class="group-title">販促物（のぼり）</h2><div class="grid">
+
+      <div class="card">
+        <img src="promotionalitems/2026イラレデータ/ミニのぼり/100_300_left.png" alt="ミニのぼり デザイン" loading="lazy">
+        <p class="cap">ミニのぼり デザイン</p>
+      </div>
+
+      <div class="card">
+        <img src="promotionalitems/2026イラレデータ/レギュラーのぼり/600_1800_left.png" alt="レギュラーのぼり デザイン" loading="lazy">
+        <p class="cap">レギュラーのぼり デザイン</p>
+      </div>
+</div>
+  </main>
+
+  <footer>
+    &copy; Kenko Salon Inc. — Internal Portfolio
+  </footer>
+
+</body>
+</html>

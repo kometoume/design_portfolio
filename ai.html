@@ -66,18 +66,26 @@
   header .back:hover { color: var(--olive); border-color: var(--olive); }
 
   main {
-    max-width: 1240px;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 70px clamp(20px, 4vw, 56px) 100px;
   }
   section { margin-bottom: 90px; }
   section:last-child { margin-bottom: 0; }
 
+  .row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
   .section-label {
     display: flex;
     align-items: baseline;
-    gap: 12px;
-    margin-bottom: 32px;
+    gap: 10px;
+    position: sticky;
+    top: 24px;
   }
   .section-label .num {
     font-size: 0.7rem;
@@ -86,7 +94,7 @@
     font-family: monospace;
   }
   .section-label h2 {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     font-weight: 700;
     margin: 0;
     color: var(--olive);
@@ -95,12 +103,10 @@
   .video-wrap {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
   }
   .video-wrap video {
     width: 100%;
-    max-width: 960px;
     border-radius: 14px;
     border: 1px solid var(--border);
     box-shadow: 0 8px 24px rgba(0,0,0,0.06);
@@ -110,19 +116,16 @@
   .video-wrap figcaption {
     font-size: 0.85rem;
     color: var(--text-sub);
-    text-align: center;
-    max-width: 560px;
   }
 
   .manga-wrap {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
   }
   .manga-wrap img {
     width: 100%;
-    max-width: 600px;
+    max-width: 460px;
     border-radius: 14px;
     border: 1px solid var(--border);
     box-shadow: 0 8px 24px rgba(0,0,0,0.06);
@@ -130,11 +133,20 @@
   .manga-wrap figcaption {
     font-size: 0.85rem;
     color: var(--text-sub);
-    text-align: center;
   }
   .manga-wrap figcaption a {
     color: var(--olive);
     text-decoration: underline;
+  }
+
+  @media (max-width: 700px) {
+    .row {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .section-label {
+      position: static;
+    }
   }
 
   .tweet-grid {
@@ -152,17 +164,27 @@
     padding: 0;
   }
   .note-list a {
-    display: block;
-    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--border);
     border-radius: 12px;
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: border-color 0.25s ease, background 0.25s ease;
+    overflow: hidden;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
   }
   .note-list a:hover {
     border-color: var(--olive);
-    background: rgba(51,61,41,0.04);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+  .note-list .thumb {
+    width: 100%;
+    aspect-ratio: 1280 / 670;
+    object-fit: cover;
+    background: #f0f0f0;
+    display: block;
+  }
+  .note-list .note-body {
+    padding: 14px 16px 18px;
   }
   .note-list .tag {
     display: inline-block;
@@ -173,6 +195,10 @@
     padding: 2px 8px;
     border-radius: 20px;
     margin-bottom: 8px;
+  }
+  .note-list .note-title {
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   footer {
@@ -194,7 +220,7 @@
 
 <main>
 
-  <section>
+  <section class="row">
     <div class="section-label">
       <span class="num">01</span>
       <h2 class="font-heading">長編AI動画</h2>
@@ -207,7 +233,7 @@
     </figure>
   </section>
 
-  <section>
+  <section class="row">
     <div class="section-label">
       <span class="num">02</span>
       <h2 class="font-heading">AI漫画</h2>
@@ -221,7 +247,7 @@
     </figure>
   </section>
 
-  <section>
+  <section class="row">
     <div class="section-label">
       <span class="num">03</span>
       <h2 class="font-heading">AI動画</h2>
@@ -236,7 +262,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="row">
     <div class="section-label">
       <span class="num">04</span>
       <h2 class="font-heading">note記事</h2>
@@ -244,26 +270,38 @@
     <ul class="note-list">
       <li>
         <a href="https://note.com/ypppofficial/n/n3cdf0c49ca4a" target="_blank" rel="noopener noreferrer">
-          <span class="tag">note</span><br>
-          note記事 ①
+          <img class="thumb" src="https://assets.st-note.com/production/uploads/images/290444652/rectangle_large_type_2_e3d85417e7504705c9f7e9526c2f746b.png?fit=bounds&quality=85&width=640" alt="" loading="lazy">
+          <span class="note-body">
+            <span class="tag">note</span><br>
+            <span class="note-title">令和8年度診療報酬改定｜7月に薬局が見直したい届出後の運用ポイント</span>
+          </span>
         </a>
       </li>
       <li>
         <a href="https://note.com/ypppofficial/n/nfa6d673f1654" target="_blank" rel="noopener noreferrer">
-          <span class="tag">note</span><br>
-          note記事 ②
+          <img class="thumb" src="https://assets.st-note.com/production/uploads/images/290053792/rectangle_large_type_2_c7c599daad3cf475a2b840f84c7f6651.png?fit=bounds&quality=85&width=640" alt="" loading="lazy">
+          <span class="note-body">
+            <span class="tag">note</span><br>
+            <span class="note-title">届出は出したけど本当に大丈夫？令和8年度改定後に薬局が確認すべきポイント</span>
+          </span>
         </a>
       </li>
       <li>
         <a href="https://note.com/ypppofficial/n/n3a89764fb31f" target="_blank" rel="noopener noreferrer">
-          <span class="tag">note</span><br>
-          note記事 ③
+          <img class="thumb" src="https://assets.st-note.com/production/uploads/images/252449755/rectangle_large_type_2_c97ffa909a77d383be281f7e09cddf5b.png?fit=bounds&quality=85&width=640" alt="" loading="lazy">
+          <span class="note-body">
+            <span class="tag">note</span><br>
+            <span class="note-title">【800ページを10分で理解】令和8年度調剤報酬改定を"生成AIで読み解く"実践ガイド</span>
+          </span>
         </a>
       </li>
       <li>
         <a href="https://note.com/ypppofficial/n/nf8f33c788faf" target="_blank" rel="noopener noreferrer">
-          <span class="tag">note</span><br>
-          note記事 ④
+          <img class="thumb" src="https://assets.st-note.com/production/uploads/images/252450979/rectangle_large_type_2_5390d11c0b4f4e6cb4b5d8772a119f59.png?fit=bounds&quality=85&width=640" alt="" loading="lazy">
+          <span class="note-body">
+            <span class="tag">note</span><br>
+            <span class="note-title">点数より怖いもの。令和8年度改定が静かに変えている"評価の軸"とは</span>
+          </span>
         </a>
       </li>
     </ul>

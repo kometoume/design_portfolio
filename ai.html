@@ -92,6 +92,28 @@
     color: var(--olive);
   }
 
+  .video-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .video-wrap video {
+    width: 100%;
+    max-width: 720px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    background: #000;
+    display: block;
+  }
+  .video-wrap figcaption {
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    text-align: center;
+    max-width: 560px;
+  }
+
   .manga-wrap {
     display: flex;
     flex-direction: column;
@@ -175,6 +197,19 @@
   <section>
     <div class="section-label">
       <span class="num">01</span>
+      <h2 class="font-heading">長編AI動画</h2>
+    </div>
+    <figure class="video-wrap">
+      <video src="videos/story-video.mp4" poster="videos/story-video-poster.jpg" controls preload="metadata" playsinline></video>
+      <figcaption>
+        AI生成素材とPremiere Proを組み合わせて制作した、健康サロン様のホームページ用ストーリー動画です。
+      </figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <div class="section-label">
+      <span class="num">02</span>
       <h2 class="font-heading">AI漫画</h2>
     </div>
     <figure class="manga-wrap">
@@ -188,7 +223,7 @@
 
   <section>
     <div class="section-label">
-      <span class="num">02</span>
+      <span class="num">03</span>
       <h2 class="font-heading">AI動画</h2>
     </div>
     <div class="tweet-grid">
@@ -203,7 +238,7 @@
 
   <section>
     <div class="section-label">
-      <span class="num">03</span>
+      <span class="num">04</span>
       <h2 class="font-heading">note記事</h2>
     </div>
     <ul class="note-list">

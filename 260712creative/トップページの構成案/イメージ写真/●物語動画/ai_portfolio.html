@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI制作ポートフォリオ | Firefly × Premiere Pro</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text-main: #1a1a1a;
+    --text-sub: #666666;
+    --accent: #0093d3;
+    --card-bg: #f9f9f9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text-main);
+    line-height: 1.8;
+  }
+  header {
+    padding: 80px 40px 40px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  header .tag {
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 1.2rem;
+  }
+  header h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 300;
+    font-size: clamp(28px, 4vw, 44px);
+    margin: 0 0 1rem;
+    letter-spacing: 0.05em;
+  }
+  header p {
+    color: var(--text-sub);
+    font-weight: 300;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .tools {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 1.8rem;
+    flex-wrap: wrap;
+  }
+  .tools span {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    border: 1px solid #ddd;
+    padding: 6px 16px;
+    border-radius: 999px;
+    color: var(--text-sub);
+  }
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px 100px;
+  }
+  .final-section {
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .final-section h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 300;
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+  }
+  .final-section .note {
+    color: var(--text-sub);
+    font-size: 14px;
+    margin-bottom: 2rem;
+  }
+  .final-section video {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 4px;
+  }
+  .group-title {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 60px 0 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .card video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    background: #000;
+  }
+  .cap {
+    font-size: 12px;
+    color: var(--text-sub);
+    padding: 10px 14px 14px;
+    margin: 0;
+    font-weight: 300;
+  }
+  footer {
+    text-align: center;
+    padding: 60px 40px;
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <span class="tag">AI GENERATED VIDEO PORTFOLIO</span>
+    <h1>物語動画コレクション</h1>
+    <p>健康サロン株式会社 Webサイト掲載予定だった物語動画と、その制作に使用したAI生成クリップ集。</p>
+    <div class="tools">
+      <span>Adobe Firefly（AI動画生成）</span>
+      <span>Adobe Premiere Pro（編集）</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="final-section">
+      <h2>完成版：Webサイト掲載用</h2>
+      <p class="note">Fireflyで生成した複数のクリップをPremiere Proで編集・構成した完成動画</p>
+      <video src="HP用の動画/4666_1920x1080_1_web.mp4" controls preload="metadata" playsinline></video>
+    </section>
+
+    <h2 class="group-title">メインストーリー動画（Firefly生成クリップ）</h2><div class="grid">
+
+      <div class="card">
+        <video src="Firefly A distant wide shot silhouette of an adult and a smaller younger figure walking side by side.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">A distant wide shot silhouette of an adult and a smaller younger figure walking side by si…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Animate this image into a natural, cinematic video.__The children are joyfully painting a co (1).mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Animate this image into a natural, cinematic video. / The children are joyfully painting a…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Cinematic slow motion video of a fresh yellow lemon being tossed into a clear blue sky.__The.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Cinematic slow motion video of a fresh yellow lemon being tossed into a clear blue sky. / …</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Cinematic wide shot of water surface reflecting two human silhouettes standing side by side..mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Cinematic wide shot of water surface reflecting two human silhouettes standing side by sid…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Close-up of many hands rhythmically playing goblet-shaped hand drums similar to djembes duri.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Close-up of many hands rhythmically playing goblet-shaped hand drums similar to djembes du…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Convert this photo into a realistic cinematic video._The people smile naturally with soft, g.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Convert this photo into a realistic cinematic video. The people smile naturally with soft,…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Create a cinematic underwater video based on the provided image. _The single fish swims forw.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Create a cinematic underwater video based on the provided image.  The single fish swims fo…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Create a realistic underwater video based on the provided image. _Animate the single fish sw (1).mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Create a realistic underwater video based on the provided image.  Animate the single fish …</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Create a realistic underwater video based on the provided image. _Animate the single fish sw (2).mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Create a realistic underwater video based on the provided image.  Animate the single fish …</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Create a realistic underwater video based on the provided image. _Animate the single fish sw (3).mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Create a realistic underwater video based on the provided image.  Animate the single fish …</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Create a realistic underwater video based on the provided image. _Animate the single fish sw (4).mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Create a realistic underwater video based on the provided image.  Animate the single fish …</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Create a realistic underwater video based on the provided image. _Animate the single fish sw.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Create a realistic underwater video based on the provided image.  Animate the single fish …</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Dynamic but natural office meeting video._Slow cinematic push-in with slight lateral movemen (1).mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Dynamic but natural office meeting video. Slow cinematic push-in with slight lateral movem…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Dynamic but natural office meeting video._Slow cinematic push-in with slight lateral movemen.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Dynamic but natural office meeting video. Slow cinematic push-in with slight lateral movem…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Elegant corporate video from this image._Very slow camera push-in._Natural blinking only._Mi (1).mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Elegant corporate video from this image. Very slow camera push-in. Natural blinking only. …</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Elegant corporate video from this image._Very slow camera push-in._Natural blinking only._Mi.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Elegant corporate video from this image. Very slow camera push-in. Natural blinking only. …</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly POV view from inside a spacecraft cockpit orbiting Earth.__The astronaut’s gloved hands are .mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">POV view from inside a spacecraft cockpit orbiting Earth. / The astronaut’s gloved hands a…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Recreate this scene as a wide cinematic shot._The people appear small in the frame, naturall.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Recreate this scene as a wide cinematic shot. The people appear small in the frame, natura…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Subtle cinematic motion added to this still image.__Slow smooth camera push-in toward the gr.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Subtle cinematic motion added to this still image. / Slow smooth camera push-in toward the…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Transform this image into a cinematic live-action tokusatsu-style action video.__Keep the ar.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Transform this image into a cinematic live-action tokusatsu-style action video. / Keep the…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Transform this image into a natural live-action video while preserving the exact original co.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Transform this image into a natural live-action video while preserving the exact original …</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Transform this image into a very subtle live-action video while preserving the exact origina.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Transform this image into a very subtle live-action video while preserving the exact origi…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Ultra realistic cinematic shot of a shallow riverside water surface reflecting two human fig.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Ultra realistic cinematic shot of a shallow riverside water surface reflecting two human f…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Ultra realistic cinematic video based on the reference image.__A person stands on a very hig.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Ultra realistic cinematic video based on the reference image. / A person stands on a very …</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Use the provided photo as the base image.__Create a natural cinematic video with subtle real (2).mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Use the provided photo as the base image. / Create a natural cinematic video with subtle r…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Use the provided photo as the base image.__Create a natural cinematic video with subtle real.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Use the provided photo as the base image. / Create a natural cinematic video with subtle r…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Use the provided photo as the base image.__Create an ultra-realistic cinematic video with ex.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Use the provided photo as the base image. / Create an ultra-realistic cinematic video with…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Use the provided photo as the base image.__Ultra realistic cinematic video.__A pink flower g.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Use the provided photo as the base image. / Ultra realistic cinematic video. / A pink flow…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Wide cinematic scene at early night._An adult silhouette observing the sky through an astron.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Wide cinematic scene at early night. An adult silhouette observing the sky through an astr…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly Wide cinematic video shot under a bright blue sky._A small group of young participants takin.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Wide cinematic video shot under a bright blue sky. A small group of young participants tak…</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly 最後人を微笑ませて 775246.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">最後人を微笑ませて 775246</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly 高画質で4ｋで自然に人物を動かして 197616.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">高画質で4ｋで自然に人物を動かして 197616</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly 高画質で4ｋで自然に人物を動かして 925027.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">高画質で4ｋで自然に人物を動かして 925027</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly 高画質で4ｋで自然に人物を動かして。それぞれバラバラの動きになるように、不自然にならないように。AIっぽくないようにして 880422.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">高画質で4ｋで自然に人物を動かして。それぞれバラバラの動きになるように、不自然にならないように。AIっぽくないようにして 880422</p>
+      </div>
+
+      <div class="card">
+        <video src="Firefly 高画質で4ｋで自然に人物を動かして。それぞれバラバラの動きになるように、不自然にならないように。AIっぽくないようにして。飲み物はのまないで。最初から全員手に空き缶は持たせないで。動画.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">高画質で4ｋで自然に人物を動かして。それぞれバラバラの動きになるように、不自然にならないように。AIっぽくないようにして。飲み物はのまないで。最初から全員手に空き缶は持たせないで。…</p>
+      </div>
+</div>
+<h2 class="group-title">新しい物語動画（Firefly生成クリップ）</h2><div class="grid">
+
+      <div class="card">
+        <video src="新しい物語動画/Firefly The person slowly stands up from a relaxed position.__They prepare and gently jump upward,_t (3).mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">The person slowly stands up from a relaxed position. / They prepare and gently jump upward…</p>
+      </div>
+
+      <div class="card">
+        <video src="新しい物語動画/Firefly Use the provided photo as the base image.__Create a natural cinematic video with subtle real (1).mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Use the provided photo as the base image. / Create a natural cinematic video with subtle r…</p>
+      </div>
+
+      <div class="card">
+        <video src="新しい物語動画/Firefly Use the provided photo as the base image.__Create a natural cinematic video with subtle real.mp4" controls preload="metadata" playsinline></video>
+        <p class="cap">Use the provided photo as the base image. / Create a natural cinematic video with subtle r…</p>
+      </div>
+</div>
+  </main>
+
+  <footer>
+    © Kenko Salon Inc. — Internal Portfolio
+  </footer>
+
+</body>
+</html>

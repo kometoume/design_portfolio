@@ -66,9 +66,9 @@
   header .back:hover { color: var(--olive); border-color: var(--olive); }
 
   main {
-    max-width: 960px;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 70px 6vw 100px;
+    padding: 70px clamp(20px, 4vw, 56px) 100px;
   }
   section { margin-bottom: 90px; }
   section:last-child { margin-bottom: 0; }
@@ -100,7 +100,7 @@
   }
   .video-wrap video {
     width: 100%;
-    max-width: 720px;
+    max-width: 960px;
     border-radius: 14px;
     border: 1px solid var(--border);
     box-shadow: 0 8px 24px rgba(0,0,0,0.06);
@@ -122,7 +122,7 @@
   }
   .manga-wrap img {
     width: 100%;
-    max-width: 480px;
+    max-width: 600px;
     border-radius: 14px;
     border: 1px solid var(--border);
     box-shadow: 0 8px 24px rgba(0,0,0,0.06);
@@ -202,7 +202,7 @@
     <figure class="video-wrap">
       <video src="videos/story-video.mp4" poster="videos/story-video-poster.jpg" controls preload="metadata" playsinline></video>
       <figcaption>
-        AI生成素材とPremiere Proを組み合わせて制作した、健康サロン様のホームページ用ストーリー動画です。
+        AI生成素材とPremiere Proを組み合わせて制作した、企業のホームページ用のストーリー動画です。
       </figcaption>
     </figure>
   </section>

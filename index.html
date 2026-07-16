@@ -44,24 +44,67 @@
           </span>
           <span class="work-card__meta">
             <span class="work-card__tag">Figma</span>
-            <span class="work-card__title"
-              >健康サロン株式会社 コーポレートサイト案</span
-            >
+            <span class="work-card__title">コーポレートサイト案</span>
           </span>
         </button>
         <template>
           <div class="modal__images">
-            <img
-              src="images/website/website_kenkosalon_top.png"
-              alt="健康サロン株式会社 コーポレートサイト トップページ"
-            />
+            <div class="carousel">
+              <div class="carousel__viewport">
+                <div class="carousel__slide is-active">
+                  <img
+                    src="images/website/website_kenkosalon_top.png"
+                    alt="コーポレートサイト トップページ"
+                  />
+                </div>
+                <div class="carousel__slide">
+                  <img
+                    src="images/website/website_kenkosalon_hero_platform.png"
+                    alt="メインビジュアル案「信頼される健康プラットフォームの創造」"
+                  />
+                </div>
+                <div class="carousel__slide">
+                  <img
+                    src="images/website/website_kenkosalon_hero_design.png"
+                    alt="メインビジュアル案「健康をデザインする」"
+                  />
+                </div>
+                <div class="carousel__slide">
+                  <img
+                    src="images/website/website_kenkosalon_data_desktop.png"
+                    alt="数字で見る健康サロン（デスクトップ版）"
+                  />
+                </div>
+                <div class="carousel__slide">
+                  <img
+                    src="images/website/website_kenkosalon_data_mobile.png"
+                    alt="数字で見る健康サロン（モバイル版）"
+                  />
+                </div>
+              </div>
+              <button
+                type="button"
+                class="carousel__btn carousel__btn--prev"
+                aria-label="前の画像"
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                class="carousel__btn carousel__btn--next"
+                aria-label="次の画像"
+              >
+                ›
+              </button>
+              <span class="carousel__counter">1 / 5</span>
+            </div>
           </div>
           <div class="modal__text">
-            <h3>健康サロン株式会社 コーポレートサイト案</h3>
+            <h3>コーポレートサイト案</h3>
             <p>
               <strong>制作意図:</strong>
               「Walk with a
-              smile.」をキャッチコピーに掲げる健康サロン株式会社のコーポレートサイト案です。薬局・薬剤師向けのソリューション（あなたの薬局、薬局の右腕、セキュリティZERO、服薬管理指導AI）を軸に、ニュース・ブログ・採用情報までを1つのトップページに整理しました。
+              smile.」をキャッチコピーに掲げる会社のコーポレートサイト案です。薬局・薬剤師向けのソリューション（あなたの薬局、薬局の右腕、セキュリティZERO、服薬管理指導AI）を軸に、ニュース・ブログ・採用情報までを1つのトップページに整理しました。
             </p>
             <p><strong>デザインポイント:</strong></p>
             <ul>
@@ -621,9 +664,38 @@
         const closeBtn = document.querySelector(".modal__close");
         const overlay = document.querySelector(".modal__overlay");
 
+        const initCarousels = (container) => {
+          container.querySelectorAll(".carousel").forEach((carousel) => {
+            const slides = carousel.querySelectorAll(".carousel__slide");
+            const counter = carousel.querySelector(".carousel__counter");
+            const prevBtn = carousel.querySelector(".carousel__btn--prev");
+            const nextBtn = carousel.querySelector(".carousel__btn--next");
+            let index = 0;
+
+            const show = (i) => {
+              index = (i + slides.length) % slides.length;
+              slides.forEach((slide, slideIndex) => {
+                slide.classList.toggle("is-active", slideIndex === index);
+              });
+              if (counter) {
+                counter.textContent = `${index + 1} / ${slides.length}`;
+              }
+            };
+
+            if (prevBtn) {
+              prevBtn.addEventListener("click", () => show(index - 1));
+            }
+            if (nextBtn) {
+              nextBtn.addEventListener("click", () => show(index + 1));
+            }
+            show(0);
+          });
+        };
+
         const openModal = (template) => {
           modalBody.innerHTML = "";
           modalBody.appendChild(template.content.cloneNode(true));
+          initCarousels(modalBody);
           modal.classList.add("is-active");
           modal.setAttribute("aria-hidden", "false");
         };

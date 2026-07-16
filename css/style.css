@@ -225,6 +225,79 @@ h3 {
   display: block;
 }
 
+.carousel {
+  position: relative;
+  background: #f2f2f2;
+}
+
+.carousel__viewport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel__slide {
+  display: none;
+  width: 100%;
+}
+
+.carousel__slide.is-active {
+  display: block;
+}
+
+.carousel__slide img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  background: #f2f2f2;
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.carousel__btn:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.carousel__btn--prev {
+  left: 10px;
+}
+
+.carousel__btn--next {
+  right: 10px;
+}
+
+.carousel__counter {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 9px;
+  border-radius: 999px;
+  z-index: 2;
+}
+
 .modal__text {
   padding: 24px 28px 32px;
   text-align: left;

@@ -244,14 +244,37 @@
         </button>
         <template>
           <div class="modal__images">
-            <img
-              src="images/ad/webad_ab_a_1080x1080.png"
-              alt="A案：ダーク背景×グラフ矢印で危機感を訴求"
-            />
-            <img
-              src="images/ad/webad_ab_b_1080x1080.png"
-              alt="B案：ライト背景×チェックリストで整理された印象を訴求"
-            />
+            <div class="carousel">
+              <div class="carousel__viewport">
+                <div class="carousel__slide is-active">
+                  <img
+                    src="images/ad/webad_ab_a_1080x1080.png"
+                    alt="A案：ダーク背景×グラフ矢印で危機感を訴求"
+                  />
+                </div>
+                <div class="carousel__slide">
+                  <img
+                    src="images/ad/webad_ab_b_1080x1080.png"
+                    alt="B案：ライト背景×チェックリストで整理された印象を訴求"
+                  />
+                </div>
+              </div>
+              <button
+                type="button"
+                class="carousel__btn carousel__btn--prev"
+                aria-label="前の画像"
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                class="carousel__btn carousel__btn--next"
+                aria-label="次の画像"
+              >
+                ›
+              </button>
+              <span class="carousel__counter">1 / 2</span>
+            </div>
           </div>
           <div class="modal__text">
             <h3>Web広告 A/Bテスト案（調剤報酬改定対策セミナー）</h3>
